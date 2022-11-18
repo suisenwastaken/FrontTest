@@ -1,0 +1,375 @@
+@font-face {
+	font-family: 'Circe';
+	src: url('fonts/Circe-Light.eot');
+	src: local('fonts/Circe'), local('fonts/Circe-Light'),
+		url('fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Circe-Light.woff') format('woff'),
+		url('fonts/Circe-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circe-Bold';
+	src: url('fonts/Circe-Bold.eot');
+	src: local('fonts/Circe Bold'), local('Circe-Bold'),
+		url('fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Circe-Bold.woff') format('woff'),
+		url('fonts/Circe-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+html body{
+  margin: 0px;
+  padding: 0px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.content {
+  content: "";
+  clear: both;
+  display: flex;
+  font-family: Circe, sans-serif;
+}
+
+.picture-box{
+  padding: 10px 0px;
+  float: left;
+  width: 50%;
+  display: flex;
+}
+
+.picture-scroll {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+}
+
+.picture-item {
+  margin-bottom: 10px;
+}
+
+.picture-item > img{
+    max-width: 100%
+}
+
+.bottom-arrow{
+  cursor: pointer;
+  border: 1px solid #dedede;
+  padding: 10px 20px;
+  align-self: center;
+  font-style: oblique;
+}
+
+.main-picture{
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-picture > img{
+  max-width: 100%;
+}
+
+.info-box{
+  padding: 50px;
+  width:50%;
+  padding-left: 20px;
+  float: left;
+}
+
+.jacket-direction{
+  display: none;
+  color: #797979;
+  text-align: justify;
+}
+
+.jacket-name{
+  font-family: Circe-Bold, sans-serif;
+  margin-bottom: 0px;
+  margin-left: -2px;
+}
+
+.jacket-tags > a{
+  font-size: 13px;
+  margin-right: 20px;
+  color: #006be5;
+  text-decoration: none;
+}
+
+.jacket-tags{
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.price-box{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.price-box > div{
+  font-family: Circe-Bold, sans-serif;
+}
+
+.price-old{
+  color: #bfbebe;
+  text-decoration:line-through;
+  margin-right: 10px;
+}
+
+.price-new{
+  color: #9a9b9b;
+  margin-right: 30px;
+}
+
+.with-cupon{
+  font-family: Circe, sans-serif;
+}
+
+.delivery-box{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.delivery-back{
+  float: left;
+  background-color: #f4f4f4;
+  padding: 3px 5%;
+  max-width: 90%;
+}
+
+.delivery-box > div{
+  font-size: 13px;
+}
+
+.instock > a{
+  text-decoration: none;
+  color: #006be5;
+}
+
+.instock > img, .delivery > img{
+  height: 13px;
+  width:13px;
+  margin-right: 10px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.buttons > button{
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  width: 45%;
+  padding: 10px;
+  font-family: Circe-Bold, sans-serif;
+}
+
+.buy-button{
+  background-color: #006be5;
+  border: none;
+  color: white;
+  margin-right: 10px;
+}
+
+.favorite-button{
+  border: 2px solid #d9d9d9;
+  background-color: white;
+}
+
+.share-button {
+  display: none;
+}
+
+.more-info{
+  display: none;
+}
+
+.description{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.description-text{
+  padding-right: 20%;
+}
+
+.share{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+.share-text{
+  margin-right: 20px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-icon{
+  width:30px;
+  height:30px;
+  margin-right: 20px;
+}
+
+.share-count{
+  padding: 5px;
+  align-self: center;
+  background-color: #efefef;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .jacket-direction {
+    display: block;
+  }
+
+  .share-text{
+    display: none;
+  }
+}
+
+
+/* добавил от себя для большей красоты */
+@media only screen and (max-width: 700px) {
+
+  .picture-scroll{
+    flex-direction: row;
+    margin-right: auto;
+  }
+
+  .picture-box{
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .bottom-arrow{
+    display: none;
+  }
+}
+
+/* решил сделать брекпоинт на мобильный интренфейс при 550px, так как уже отсюда начинало выглядеть некрасиво */
+@media only screen and (max-width: 550px) {
+
+  .share{
+    display: none;
+  }
+
+  .picture-scroll{
+    display: none;
+  }
+
+  .jacket-name{
+    display: none;
+  }
+
+  .content{
+    flex-direction: column;
+    overflow-x:hidden;
+  }
+
+  .content > div{
+    width: 100%;
+  }
+
+  .info-box{
+    padding: 0px 10px;
+  }
+
+  .main-picture > img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .jacket-tags{
+    margin: 10px 0px;
+  }
+
+  .delivery-box{
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .delivery-back{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .buttons{
+    margin: 0px;
+  }
+
+  .buttons > button{
+    width: 100%;
+    margin: 5px 0px;
+  }
+
+  .buttons > .favorite-button{
+    width:80%;
+    align-self: flex-start;
+  }
+
+  .share-button{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons-and-description{
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .description-text{
+    text-align: justify;
+    padding-right: 0px;
+  }
+
+  .more-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 1px solid #f4f4f4;
+    margin: 20px -20px;
+  }
+
+  .more-info > div{
+      font-family: Circe-Bold, sans-serif;
+  }
+
+}
